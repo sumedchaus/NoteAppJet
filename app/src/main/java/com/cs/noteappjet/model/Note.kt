@@ -7,14 +7,15 @@ import java.time.Instant
 import java.time.LocalDateTime
 import java.util.*
 
+//@Entity is used for creating database tables
 @Entity(tableName = "notes_tbl")
 data class Note(
-    @PrimaryKey
-    val id : UUID = UUID.randomUUID(),
-   @ColumnInfo(name = "note_title")
+    @PrimaryKey  //for generating key
+    val id: UUID = UUID.randomUUID(),
+    @ColumnInfo(name = "note_title")  // for creating the column
     val title: String,
     @ColumnInfo(name = "note_description")
-    val description : String,
+    val description: String,
     @ColumnInfo(name = "note_entry_date")
-    val entryDate : Date = Date.from(Instant.now())
+    val entryDate: Date = Date.from(Instant.now())
 )
