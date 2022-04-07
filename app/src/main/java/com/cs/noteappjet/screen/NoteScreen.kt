@@ -24,6 +24,7 @@ import com.cs.noteappjet.components.NoteButton
 import com.cs.noteappjet.components.NoteInputText
 import com.cs.noteappjet.data.NotesDataSource
 import com.cs.noteappjet.model.Note
+import com.cs.noteappjet.utils.formatDate
 import java.time.format.DateTimeFormatter
 
 @ExperimentalComposeUiApi
@@ -137,8 +138,8 @@ fun NoteRow(
             Text(text = note.title,
             style = MaterialTheme.typography.subtitle2)
             Text(text = note.description, style = MaterialTheme.typography.subtitle1)
-//            Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")),
-//            style = MaterialTheme.typography.caption)
+            Text(text = formatDate(note.entryDate.time),
+                style = MaterialTheme.typography.caption)
         }
         
     }
