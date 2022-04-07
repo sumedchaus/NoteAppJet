@@ -52,7 +52,6 @@ fun NoteScreen(
                     contentDescription = "Notification Icon"
                 )
             },
-                backgroundColor = Color.Magenta
             )
         }) {
         Column(
