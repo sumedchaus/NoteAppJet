@@ -42,6 +42,7 @@ fun NoteScreen(
         mutableStateOf("")
     }
 
+
     Scaffold(
         topBar = {
             TopAppBar(title = {
